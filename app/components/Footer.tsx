@@ -55,7 +55,7 @@ const defaultSocialLinks: SocialLink[] = [
 ];
 
 const defaultContactInfo = {
-  email: "hola@nordia.com.ar",
+  email: "founders@nordia.com.ar",
   phone: "+54 9 379 428-1273",
   location: "Corrientes, Argentina",
 };
