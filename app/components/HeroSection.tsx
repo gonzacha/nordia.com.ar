@@ -151,17 +151,37 @@ export default function HeroSection({
                 <MessageCircle className="w-5 h-5" />
                 {primaryCTA.text}
               </motion.a>
-              <motion.a
+              <motion.button
                 variants={scaleIn}
                 transition={{ duration: 0.4 }}
-                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
-                href={secondaryCTA.href}
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-neutral-700 text-white font-medium rounded-xl hover:bg-neutral-800 transition-colors"
+                onClick={() => {
+                  document.getElementById('demo')?.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                  });
+                }}
+                className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-[#00ff88]/10 to-emerald-500/10 hover:from-[#00ff88]/20 hover:to-emerald-500/20 border-2 border-[#00ff88] hover:border-[#00ff88]/80 text-[#00ff88] font-semibold text-lg rounded-xl transition-all duration-300 backdrop-blur-sm"
               >
-                {secondaryCTA.text}
-                <ArrowRight className="w-5 h-5" />
-              </motion.a>
+                {/* Icono Play */}
+                <span className="flex items-center justify-center w-10 h-10 bg-[#00ff88] text-neutral-900 rounded-full group-hover:scale-110 transition-transform shadow-lg shadow-[#00ff88]/50">
+                  <svg className="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </span>
+
+                <span className="relative">
+                  Ver demo interactiva
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#00ff88] group-hover:w-full transition-all duration-300"></span>
+                </span>
+
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+
+                {/* Badge GRATIS */}
+                <span className="absolute -top-2 -right-2 px-2 py-0.5 bg-yellow-400 text-neutral-900 text-xs font-bold rounded-full animate-pulse">
+                  GRATIS
+                </span>
+              </motion.button>
             </motion.div>
 
             {/* Trust badges - hidden on mobile */}
