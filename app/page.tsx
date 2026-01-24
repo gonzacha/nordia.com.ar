@@ -8,8 +8,6 @@ import HowItWorksSection from "./components/HowItWorksSection";
 import StatsSection from "./components/StatsSection";
 import ChatSimulator from "./components/ChatSimulator";
 import PricingSection from "./components/PricingSection";
-import ComparisonTable from "./components/ComparisonTable";
-import TestimonialsSection from "./components/TestimonialsSection";
 import FAQSection from "./components/FAQSection";
 import FinalCTASection from "./components/FinalCTASection";
 import Footer from "./components/Footer";
@@ -80,10 +78,6 @@ export default function LandingPage() {
       <ChatSimulator />
 
       <PricingSection whatsappNumber={whatsappNumber} />
-
-      <ComparisonTable />
-
-      <TestimonialsSection />
 
       <FAQSection />
 
