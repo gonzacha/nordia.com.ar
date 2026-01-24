@@ -75,48 +75,59 @@ export default function HeroSection({
   )}`;
 
   return (
-    <section className="relative min-h-[90vh] flex items-center py-16 lg:py-24 overflow-hidden">
+    <section className="relative min-h-0 md:min-h-[90vh] flex items-center py-12 md:py-16 lg:py-24 overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950" />
       <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left column - Content */}
-          <div className="flex flex-col space-y-6 text-center lg:text-left">
-            {/* Preheadline */}
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+          {/* Left column - Content (order-2 on mobile to show phone first) */}
+          <div className="order-2 lg:order-1 flex flex-col space-y-4 md:space-y-6 text-center lg:text-left">
+            {/* Preheadline - hidden on mobile */}
             <motion.span
               initial="hidden"
               animate="visible"
               variants={fadeInUp}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="inline-flex items-center justify-center lg:justify-start"
+              className="hidden md:inline-flex items-center justify-center lg:justify-start"
             >
               <span className="px-4 py-1.5 bg-[#00ff88]/10 border border-[#00ff88]/20 rounded-full text-[#00ff88] text-sm font-medium">
                 {preheadline}
               </span>
             </motion.span>
 
-            {/* Headline */}
+            {/* Headline - hidden on mobile */}
             <motion.h1
               initial="hidden"
               animate="visible"
               variants={fadeInUp}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight"
+              className="hidden md:block text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight"
             >
               {headline}
             </motion.h1>
 
-            {/* Subheadline */}
+            {/* Subheadline - hidden on mobile */}
             <motion.p
               initial="hidden"
               animate="visible"
               variants={fadeInDown}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-lg sm:text-xl text-neutral-300 max-w-xl mx-auto lg:mx-0"
+              className="hidden md:block text-lg sm:text-xl text-neutral-300 max-w-xl mx-auto lg:mx-0"
             >
               {subheadline}
+            </motion.p>
+
+            {/* Mobile-only short text */}
+            <motion.p
+              initial="hidden"
+              animate="visible"
+              variants={fadeInDown}
+              transition={{ duration: 0.4, delay: 0.2 }}
+              className="md:hidden text-lg text-neutral-300 text-center"
+            >
+              Automatizá tu WhatsApp. Respuestas 24/7.
             </motion.p>
 
             {/* CTAs */}
@@ -153,13 +164,13 @@ export default function HeroSection({
               </motion.a>
             </motion.div>
 
-            {/* Trust badges */}
+            {/* Trust badges - hidden on mobile */}
             <motion.div
               initial="hidden"
               animate="visible"
               variants={staggerContainer}
               transition={{ delay: 0.8 }}
-              className="flex flex-wrap gap-6 justify-center lg:justify-start pt-6"
+              className="hidden md:flex flex-wrap gap-6 justify-center lg:justify-start pt-6"
             >
               {trustBadges.map((badge, index) => (
                 <motion.div
@@ -175,13 +186,13 @@ export default function HeroSection({
             </motion.div>
           </div>
 
-          {/* Right column - Chat mockup */}
+          {/* Right column - Chat mockup (order-1 on mobile to show first) */}
           <motion.div
             initial="hidden"
             animate="visible"
             variants={fadeInRight}
             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-            className="relative flex justify-center lg:justify-end"
+            className="order-1 lg:order-2 relative flex justify-center lg:justify-end"
           >
             <div className="w-full max-w-sm">
               {/* Phone frame */}
