@@ -15,6 +15,8 @@ import FinalCTASection from "./components/FinalCTASection";
 import Footer from "./components/Footer";
 import FloatingWhatsAppButton from "./components/FloatingWhatsAppButton";
 import ScrollProgress from "./components/ScrollProgress";
+import ChatCarousel from "@/app/components/ChatCarousel";
+import { chatSlides } from "@/app/data/chatSlides";
 
 export default function LandingPage() {
   const whatsappNumber = process.env.NEXT_PUBLIC_WA_PHONE ?? "5493794281273";
@@ -31,6 +33,8 @@ export default function LandingPage() {
         secondaryCTA={{ text: "Ver demo", href: "#demo" }}
         whatsappNumber={whatsappNumber}
       />
+
+      <ChatCarousel slides={chatSlides} />
 
       <PainPointsSection painPoints={[
         {
