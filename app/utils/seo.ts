@@ -153,6 +153,10 @@ export function generateSEOMeta(
     alternates: {
       canonical: canonicalUrl,
     },
+    icons: {
+      icon: "/favicon.png",
+      apple: "/favicon.png",
+    },
     openGraph: {
       type: "website",
       locale: SITE_CONFIG.locale,
