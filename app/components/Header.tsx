@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
+import Link from "next/link";
 
 type NavLink = {
   label: string;
@@ -84,19 +85,16 @@ export default function Header({
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
-            <a
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: "smooth" });
-              }}
-              className="flex items-center gap-2"
-            >
-              <div className="w-8 h-8 rounded-lg bg-[#00ff88] flex items-center justify-center">
-                <span className="text-neutral-900 font-bold text-lg">N</span>
-              </div>
-              <span className="text-white font-bold text-xl">{logo}</span>
-            </a>
+            <div className="flex items-center gap-2">
+              <Link href="/">
+                <img
+                  src="/iso.png"
+                  alt="Nordia"
+                  className="h-8 w-8 cursor-pointer transition-opacity hover:opacity-80"
+                />
+              </Link>
+              <span className="text-white font-bold text-xl">NORDIA</span>
+            </div>
 
             {/* Desktop navigation */}
             <nav className="hidden lg:flex items-center gap-8">
@@ -163,10 +161,14 @@ export default function Header({
           {/* Sidebar header */}
           <div className="flex items-center justify-between p-4 border-b border-neutral-800">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-[#00ff88] flex items-center justify-center">
-                <span className="text-neutral-900 font-bold text-lg">N</span>
-              </div>
-              <span className="text-white font-bold text-xl">{logo}</span>
+              <Link href="/">
+                <img
+                  src="/iso.png"
+                  alt="Nordia"
+                  className="h-8 w-8 cursor-pointer transition-opacity hover:opacity-80"
+                />
+              </Link>
+              <span className="text-white font-bold text-xl">NORDIA</span>
             </div>
             <button
               onClick={() => setIsMobileMenuOpen(false)}
