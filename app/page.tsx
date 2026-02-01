@@ -7,6 +7,7 @@ import BenefitsSection from "./components/BenefitsSection";
 import HowItWorksSection from "./components/HowItWorksSection";
 import StatsSection from "./components/StatsSection";
 import ChatSimulator from "./components/ChatSimulator";
+import LiveDemoSection from "./components/LiveDemoSection";
 import PricingSection from "./components/PricingSection";
 import FAQSection from "./components/FAQSection";
 import FinalCTASection from "./components/FinalCTASection";
@@ -76,6 +77,8 @@ export default function LandingPage() {
       <HowItWorksSection whatsappNumber={whatsappNumber} />
 
       <ChatSimulator />
+
+      <LiveDemoSection />
 
       <PricingSection whatsappNumber={whatsappNumber} />
 
