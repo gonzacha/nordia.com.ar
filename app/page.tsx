@@ -31,6 +31,8 @@ export default function LandingPage() {
         whatsappNumber={whatsappNumber}
       />
 
+      <LiveDemoSection />
+
       <PainPointsSection painPoints={[
         {
           emoji: "😩",
@@ -75,8 +77,6 @@ export default function LandingPage() {
       <StatsSection />
 
       <HowItWorksSection whatsappNumber={whatsappNumber} />
-
-      <LiveDemoSection />
 
       <PricingSection whatsappNumber={whatsappNumber} />
 
