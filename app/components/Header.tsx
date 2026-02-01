@@ -22,7 +22,7 @@ const defaultNavLinks: NavLink[] = [
   { label: "Cómo funciona", href: "#como-funciona" },
   { label: "Precios", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
-  { label: "Demo", href: "#demo" },
+  { label: "Demo", href: "#live-demo" },
 ];
 
 export default function Header({

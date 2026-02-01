@@ -200,7 +200,7 @@ export default function ChatSimulator({
   }, [currentIndex, messages, typingDelay, messageDelay, isStarted]);
 
   return (
-    <section id="demo" className="py-20 lg:py-28 bg-neutral-950 scroll-mt-20" ref={sectionRef}>
+    <section id="ejemplo" className="py-20 lg:py-28 bg-neutral-950 scroll-mt-20" ref={sectionRef}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div

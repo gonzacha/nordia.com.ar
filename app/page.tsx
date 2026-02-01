@@ -27,7 +27,7 @@ export default function LandingPage() {
         headline="Tu negocio responde WhatsApp las 24 horas, sin contratar a nadie"
         subheadline="Inteligencia artificial entrenada para tu negocio. Responde consultas, agenda turnos y deriva lo complejo. Desde $15.000 por 3 meses."
         primaryCTA={{ text: "Empezar ahora", href: "#" }}
-        secondaryCTA={{ text: "Ver demo", href: "#demo" }}
+        secondaryCTA={{ text: "Ver demo", href: "#live-demo" }}
         whatsappNumber={whatsappNumber}
       />
 
@@ -76,13 +76,13 @@ export default function LandingPage() {
 
       <HowItWorksSection whatsappNumber={whatsappNumber} />
 
-      <ChatSimulator />
-
       <LiveDemoSection />
 
       <PricingSection whatsappNumber={whatsappNumber} />
 
       <FAQSection />
+
+      <ChatSimulator />
 
       <FinalCTASection whatsappNumber={whatsappNumber} />
 
