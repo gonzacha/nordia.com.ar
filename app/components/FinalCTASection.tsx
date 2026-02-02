@@ -37,7 +37,7 @@ export default function FinalCTASection({
   },
   secondaryButton = {
     text: "Ver demo",
-    href: "#demo",
+    href: "#live-demo",
   },
   trustElements = defaultTrustElements,
   whatsappNumber = "5493794281273",

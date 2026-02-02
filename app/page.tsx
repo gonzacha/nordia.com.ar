@@ -18,9 +18,9 @@ export default function LandingPage() {
 
       <HeroSection />
 
-      <LiveDemoSection />
-
       <ValueBullets />
+
+      <LiveDemoSection />
 
       <PricingSection whatsappNumber={whatsappNumber} />
 
