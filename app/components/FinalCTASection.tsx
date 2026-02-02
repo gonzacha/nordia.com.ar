@@ -49,15 +49,15 @@ export default function FinalCTASection({
   return (
     <section className="relative py-24 lg:py-32 overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#00ff88]/20 via-[#00ff88]/10 to-transparent" />
-      <div className="absolute inset-0 bg-neutral-950" style={{ mixBlendMode: "multiply" }} />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#00ff88]/10 via-transparent to-[#00ff88]/5" />
+      <div className="absolute inset-0 bg-white" />
 
       {/* Glow effects */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#00ff88]/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#00ff88]/10 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#00ff88]/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#00ff88]/5 rounded-full blur-3xl" />
 
       {/* Grid pattern */}
-      <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5" />
+      <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
@@ -73,12 +73,12 @@ export default function FinalCTASection({
           </div>
 
           {/* Headline */}
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6 leading-tight">
             {headline}
           </h2>
 
           {/* Subheadline */}
-          <p className="text-xl text-neutral-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-neutral-600 mb-10 max-w-2xl mx-auto leading-relaxed">
             {subheadline}
           </p>
 
@@ -96,7 +96,7 @@ export default function FinalCTASection({
 
             <a
               href={secondaryButton.href}
-              className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl border border-white/20 hover:bg-white/20 hover:scale-105 transition-all duration-200"
+              className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white border-2 border-neutral-300 text-neutral-900 font-semibold rounded-xl hover:border-[#00ff88] hover:bg-neutral-50 hover:scale-105 transition-all duration-200 shadow-md"
             >
               <Play className="w-5 h-5" />
               {secondaryButton.text}
@@ -108,7 +108,7 @@ export default function FinalCTASection({
             {trustElements.map((element, index) => (
               <div
                 key={index}
-                className="flex items-center gap-2 text-neutral-400"
+                className="flex items-center gap-2 text-neutral-600"
               >
                 <span className="text-[#00ff88]">{element.icon}</span>
                 <span className="text-sm">{element.text}</span>
@@ -117,7 +117,7 @@ export default function FinalCTASection({
           </div>
 
           {/* Bottom trust badge */}
-          <div className="mt-12 pt-8 border-t border-neutral-800">
+          <div className="mt-12 pt-8 border-t border-neutral-200">
             <p className="text-neutral-500 text-sm">
               🔒 Pago seguro · 📧 Factura incluida · 🇦🇷 Soporte 100% argentino
             </p>

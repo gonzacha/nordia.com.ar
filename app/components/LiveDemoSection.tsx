@@ -10,11 +10,11 @@ export default function LiveDemoSection() {
   return (
     <section
       id="live-demo"
-      className="py-20 lg:py-32 bg-neutral-950 scroll-mt-20 relative overflow-hidden"
+      className="py-20 lg:py-32 bg-white scroll-mt-20 relative overflow-hidden"
       ref={sectionRef}
     >
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-radial from-emerald-500/5 via-transparent to-transparent opacity-30" />
+      <div className="absolute inset-0 bg-gradient-radial from-emerald-500/10 via-transparent to-transparent opacity-50" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
@@ -30,18 +30,18 @@ export default function LiveDemoSection() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="inline-block mb-4"
           >
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-sm font-medium">
-              <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/30 rounded-full text-emerald-700 text-sm font-medium">
+              <span className="w-2 h-2 bg-emerald-600 rounded-full animate-pulse" />
               Demo en Vivo
             </span>
           </motion.div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 mb-6">
             Probá Nordia en tiempo real
           </h2>
-          <p className="text-lg text-neutral-400 mb-8">
+          <p className="text-lg text-neutral-600 mb-8">
             Este es el mismo bot que atiende negocios reales.{" "}
-            <span className="text-white font-medium">Escribí 'setup'</span> para comenzar y configurá tu propio negocio ficticio.
+            <span className="text-neutral-900 font-medium">Escribí 'setup'</span> para comenzar y configurá tu propio negocio ficticio.
           </p>
 
           {/* Quick instructions */}
@@ -51,17 +51,17 @@ export default function LiveDemoSection() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto mb-12"
           >
-            <div className="bg-neutral-900/50 border border-neutral-800 rounded-xl p-4 backdrop-blur-sm">
+            <div className="bg-white border border-neutral-200 rounded-xl p-4 shadow-sm">
               <div className="text-2xl mb-2">1️⃣</div>
-              <p className="text-sm text-neutral-400">Escribí <span className="text-white font-mono">setup</span></p>
+              <p className="text-sm text-neutral-600">Escribí <span className="text-neutral-900 font-mono">setup</span></p>
             </div>
-            <div className="bg-neutral-900/50 border border-neutral-800 rounded-xl p-4 backdrop-blur-sm">
+            <div className="bg-white border border-neutral-200 rounded-xl p-4 shadow-sm">
               <div className="text-2xl mb-2">2️⃣</div>
-              <p className="text-sm text-neutral-400">Configurá tu negocio</p>
+              <p className="text-sm text-neutral-600">Configurá tu negocio</p>
             </div>
-            <div className="bg-neutral-900/50 border border-neutral-800 rounded-xl p-4 backdrop-blur-sm">
+            <div className="bg-white border border-neutral-200 rounded-xl p-4 shadow-sm">
               <div className="text-2xl mb-2">3️⃣</div>
-              <p className="text-sm text-neutral-400">Probá consultas y turnos</p>
+              <p className="text-sm text-neutral-600">Probá consultas y turnos</p>
             </div>
           </motion.div>
         </motion.div>
@@ -78,7 +78,7 @@ export default function LiveDemoSection() {
             <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl blur-xl opacity-20" />
 
             {/* Frame container */}
-            <div className="relative bg-neutral-900 rounded-2xl overflow-hidden shadow-2xl shadow-black/50 border border-neutral-800">
+            <div className="relative bg-white rounded-2xl overflow-hidden shadow-2xl shadow-neutral-400/30 border border-neutral-200">
               <iframe
                 src="/demo/chatbot_demo.html"
                 className="w-full h-[600px] lg:h-[720px] border-0"
@@ -98,7 +98,7 @@ export default function LiveDemoSection() {
           className="text-center mt-8"
         >
           <p className="text-neutral-500 text-sm max-w-2xl mx-auto">
-            💡 <span className="text-neutral-400">Tip:</span> Después de completar el setup, probá escribir <span className="text-white font-mono">servicios</span> o <span className="text-white font-mono">turno</span> para ver las capacidades del bot.
+            💡 <span className="text-neutral-600">Tip:</span> Después de completar el setup, probá escribir <span className="text-neutral-900 font-mono">servicios</span> o <span className="text-neutral-900 font-mono">turno</span> para ver las capacidades del bot.
           </p>
         </motion.div>
       </div>

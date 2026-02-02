@@ -78,7 +78,7 @@ export default function Header({
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-neutral-950/80 backdrop-blur-lg border-b border-neutral-800"
+            ? "bg-white/80 backdrop-blur-lg border-b border-neutral-200 shadow-sm"
             : "bg-transparent"
         }`}
       >
@@ -93,7 +93,7 @@ export default function Header({
                   className="h-8 w-8 cursor-pointer transition-opacity hover:opacity-80"
                 />
               </Link>
-              <span className="text-white font-bold text-xl">NORDIA</span>
+              <span className="text-neutral-900 font-bold text-xl">NORDIA</span>
             </div>
 
             {/* Desktop navigation */}
@@ -106,7 +106,7 @@ export default function Header({
                     e.preventDefault();
                     scrollToSection(link.href);
                   }}
-                  className="text-neutral-300 hover:text-white text-sm font-medium transition-colors"
+                  className="text-neutral-600 hover:text-neutral-900 text-sm font-medium transition-colors"
                 >
                   {link.label}
                 </a>
@@ -129,7 +129,7 @@ export default function Header({
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMobileMenuOpen(true)}
-              className="lg:hidden w-10 h-10 flex items-center justify-center text-white hover:bg-neutral-800 rounded-lg transition-colors"
+              className="lg:hidden w-10 h-10 flex items-center justify-center text-neutral-900 hover:bg-neutral-100 rounded-lg transition-colors"
               aria-label="Abrir menú"
             >
               <Menu className="w-6 h-6" />
@@ -148,18 +148,18 @@ export default function Header({
       >
         {/* Backdrop */}
         <div
-          className="absolute inset-0 bg-neutral-950/80 backdrop-blur-sm"
+          className="absolute inset-0 bg-neutral-900/50 backdrop-blur-sm"
           onClick={() => setIsMobileMenuOpen(false)}
         />
 
         {/* Sidebar */}
         <div
-          className={`absolute top-0 right-0 w-full max-w-sm h-full bg-neutral-900 border-l border-neutral-800 transform transition-transform duration-300 ${
+          className={`absolute top-0 right-0 w-full max-w-sm h-full bg-white border-l border-neutral-200 shadow-2xl transform transition-transform duration-300 ${
             isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
           {/* Sidebar header */}
-          <div className="flex items-center justify-between p-4 border-b border-neutral-800">
+          <div className="flex items-center justify-between p-4 border-b border-neutral-200">
             <div className="flex items-center gap-2">
               <Link href="/">
                 <img
@@ -168,11 +168,11 @@ export default function Header({
                   className="h-8 w-8 cursor-pointer transition-opacity hover:opacity-80"
                 />
               </Link>
-              <span className="text-white font-bold text-xl">NORDIA</span>
+              <span className="text-neutral-900 font-bold text-xl">NORDIA</span>
             </div>
             <button
               onClick={() => setIsMobileMenuOpen(false)}
-              className="w-10 h-10 flex items-center justify-center text-white hover:bg-neutral-800 rounded-lg transition-colors"
+              className="w-10 h-10 flex items-center justify-center text-neutral-900 hover:bg-neutral-100 rounded-lg transition-colors"
               aria-label="Cerrar menú"
             >
               <X className="w-6 h-6" />
@@ -189,7 +189,7 @@ export default function Header({
                   e.preventDefault();
                   scrollToSection(link.href);
                 }}
-                className="block px-4 py-3 text-neutral-300 hover:text-white hover:bg-neutral-800 rounded-lg text-lg font-medium transition-colors"
+                className="block px-4 py-3 text-neutral-600 hover:text-neutral-900 hover:bg-neutral-50 rounded-lg text-lg font-medium transition-colors"
               >
                 {link.label}
               </a>
@@ -197,7 +197,7 @@ export default function Header({
           </nav>
 
           {/* Sidebar CTA */}
-          <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-neutral-800">
+          <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-neutral-200">
             <a
               href={waLink}
               target="_blank"

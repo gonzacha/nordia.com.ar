@@ -81,7 +81,7 @@ export default function Footer({
   };
 
   return (
-    <footer className="bg-neutral-950 border-t border-neutral-800">
+    <footer className="bg-neutral-900 border-t border-neutral-800">
       {/* Main footer */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
