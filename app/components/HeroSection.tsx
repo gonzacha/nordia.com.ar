@@ -12,10 +12,10 @@ export default function HeroSection() {
           </p>
 
           <a
-            href="#live-demo"
+            href="/new"
             className="inline-block px-8 py-4 bg-[#00ff88] text-neutral-900 font-semibold rounded-xl hover:bg-[#00ff88]/90 transition-colors"
           >
-            Probar demo
+            Probar ahora
           </a>
         </div>
       </div>
