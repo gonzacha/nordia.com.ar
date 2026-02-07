@@ -35,12 +35,6 @@ const defaultQuickLinks: FooterLink[] = [
   { label: "Demo", href: "#demo" },
 ];
 
-const defaultLegalLinks: FooterLink[] = [
-  { label: "Términos y condiciones", href: "/terminos" },
-  { label: "Política de privacidad", href: "/privacidad" },
-  { label: "Política de reembolso", href: "/reembolso" },
-];
-
 const defaultSocialLinks: SocialLink[] = [
   {
     icon: <Instagram className="w-5 h-5" />,
@@ -62,9 +56,8 @@ const defaultContactInfo = {
 
 export default function Footer({
   logo = "Nordia",
-  description = "Automatizamos tu WhatsApp con inteligencia artificial para que no pierdas más clientes. Solución pensada para PyMEs argentinas.",
+  description = "Sistema conversacional determinístico para negocios.",
   quickLinks = defaultQuickLinks,
-  legalLinks = defaultLegalLinks,
   socialLinks = defaultSocialLinks,
   contactInfo = defaultContactInfo,
   whatsappNumber = "5493794281273",
@@ -180,22 +173,8 @@ export default function Footer({
             </ul>
           </div>
 
-          {/* Column 4: Legal */}
-          <div>
-            <h4 className="text-white font-semibold mb-4">Legal</h4>
-            <ul className="space-y-3">
-              {legalLinks.map((link) => (
-                <li key={link.href}>
-                  <a
-                    href={link.href}
-                    className="text-neutral-400 hover:text-[#00ff88] text-sm transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Column 4 spacer */}
+          <div />
         </div>
       </div>
 
