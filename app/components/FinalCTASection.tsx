@@ -1,11 +1,6 @@
 "use client";
 
-import { MessageCircle, Play, Shield, Clock, CreditCard } from "lucide-react";
-
-type TrustElement = {
-  icon: React.ReactNode;
-  text: string;
-};
+import { MessageCircle, Play } from "lucide-react";
 
 type FinalCTASectionProps = {
   headline?: string;
@@ -18,28 +13,20 @@ type FinalCTASectionProps = {
     text: string;
     href: string;
   };
-  trustElements?: TrustElement[];
   whatsappNumber?: string;
 };
 
-const defaultTrustElements: TrustElement[] = [
-  { icon: <Shield className="w-5 h-5" />, text: "Garantía 15 días" },
-  { icon: <Clock className="w-5 h-5" />, text: "Setup en 48hs" },
-  { icon: <CreditCard className="w-5 h-5" />, text: "Sin permanencia" },
-];
-
 export default function FinalCTASection({
-  headline = "¿Listo para dejar de perder clientes?",
-  subheadline = "Empezá hoy y en 48 horas tu negocio responde solo. Sin riesgo: si no te convence, te devolvemos el 100%.",
+  headline = "¿Tu negocio opera por WhatsApp sin sistema?",
+  subheadline = "Estamos buscando negocios reales para validar Nordia. Sin costo, sin compromiso.",
   primaryButton = {
-    text: "Quiero mi lugar",
+    text: "Hablemos",
     href: "#",
   },
   secondaryButton = {
-    text: "Probar ahora",
+    text: "Ver cómo funciona",
     href: "/new",
   },
-  trustElements = defaultTrustElements,
   whatsappNumber = "5493794281273",
 }: FinalCTASectionProps) {
   const waLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
@@ -61,17 +48,6 @@ export default function FinalCTASection({
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00ff88]/10 border border-[#00ff88]/20 rounded-full mb-8">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00ff88] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#00ff88]"></span>
-            </span>
-            <span className="text-[#00ff88] text-sm font-medium">
-              Solo quedan 12 lugares este mes
-            </span>
-          </div>
-
           {/* Headline */}
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6 leading-tight">
             {headline}
@@ -101,26 +77,6 @@ export default function FinalCTASection({
               <Play className="w-5 h-5" />
               {secondaryButton.text}
             </a>
-          </div>
-
-          {/* Trust elements */}
-          <div className="flex flex-wrap justify-center gap-6 lg:gap-10">
-            {trustElements.map((element, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-2 text-neutral-600"
-              >
-                <span className="text-[#00ff88]">{element.icon}</span>
-                <span className="text-sm">{element.text}</span>
-              </div>
-            ))}
-          </div>
-
-          {/* Bottom trust badge */}
-          <div className="mt-12 pt-8 border-t border-neutral-200">
-            <p className="text-neutral-500 text-sm">
-              🔒 Pago seguro · 📧 Factura incluida · 🇦🇷 Soporte 100% argentino
-            </p>
           </div>
         </div>
       </div>
