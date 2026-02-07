@@ -1,8 +1,8 @@
 export default function ValueBullets() {
   const bullets = [
-    "Responde clientes 24/7",
-    "Muestra servicios automáticamente",
-    "Agenda turnos sin intervención humana"
+    "Operaciones ejecutadas, no solo mensajes respondidos",
+    "Plano admin y plano cliente separados",
+    "Determinístico: cada acción es predecible y trazable"
   ];
 
   return (
