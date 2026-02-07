@@ -9,20 +9,29 @@ type FAQ = {
 
 const faqs: FAQ[] = [
   {
+    question: "¿Qué es Nordia?",
+    answer:
+      "Un sistema conversacional determinístico que permite a tu negocio operar a través de WhatsApp. No es un bot genérico — tiene flujos definidos y cada acción es predecible."
+  },
+  {
     question: "¿Necesito instalar algo?",
-    answer: "No, nosotros configuramos todo por vos."
+    answer:
+      "No. Nordia se conecta a tu WhatsApp Business. Seguís usando tu número de siempre."
   },
   {
-    question: "¿Funciona en mi WhatsApp?",
-    answer: "Sí, funciona con tu cuenta de WhatsApp Business actual."
+    question: "¿Usa inteligencia artificial?",
+    answer:
+      "El core es determinístico, sin modelo de lenguaje. Cada respuesta está definida por reglas, no por un modelo que interpreta."
   },
   {
-    question: "¿Puedo editar servicios luego?",
-    answer: "Sí, podés actualizar servicios y precios cuando quieras."
+    question: "¿Para qué tipo de negocio es?",
+    answer:
+      "Para negocios con más de una persona atendiendo WhatsApp, o con múltiples sucursales. Si una sola persona maneja todo sin problemas, probablemente no lo necesitás todavía."
   },
   {
-    question: "¿Cuánto tarda el setup?",
-    answer: "48 horas desde que confirmás."
+    question: "¿Tiene costo?",
+    answer:
+      "Estamos en etapa de validación. No hay costo mientras probamos juntos."
   }
 ];
 
