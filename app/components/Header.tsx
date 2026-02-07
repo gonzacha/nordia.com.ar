@@ -18,8 +18,6 @@ type HeaderProps = {
 };
 
 const defaultNavLinks: NavLink[] = [
-  { label: "Beneficios", href: "#beneficios" },
-  { label: "Cómo funciona", href: "#como-funciona" },
   { label: "Precios", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
   { label: "Demo", href: "#live-demo" },
@@ -28,7 +26,7 @@ const defaultNavLinks: NavLink[] = [
 export default function Header({
   logo = "Nordia",
   navLinks = defaultNavLinks,
-  ctaText = "Empezar ahora",
+  ctaText = "Contactar",
   whatsappNumber = "5493794281273",
 }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);

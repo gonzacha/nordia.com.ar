@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { generateSEOMeta, generateOrganizationSchema, generateProductSchema } from "./utils/seo";
+import { generateOrganizationSchema, generateProductSchema } from "./utils/seo";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = generateSEOMeta("home");
+export const metadata: Metadata = {
+  title: "Nordia — Sistema conversacional para negocios",
+  description:
+    "Operá tu negocio a través de WhatsApp. Instrucciones del equipo, ejecución del sistema, atención al cliente. Todo registrado.",
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
