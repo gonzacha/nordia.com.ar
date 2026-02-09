@@ -512,6 +512,7 @@
             constructor(store, bot) {
                 this.store = store;
                 this.bot = bot;
+                this.isInitialRender = true; // Flag to prevent auto-focus on initial load
                 this.elements = {
                     messages: document.getElementById('messages'),
                     input: document.getElementById('input'),
@@ -560,7 +561,13 @@
                 });
 
                 this.elements.messages.scrollTop = this.elements.messages.scrollHeight;
-                this.elements.input.focus();
+
+                // Only focus input after initial render (not on page load)
+                // This prevents unwanted scroll-to-iframe behavior on landing page
+                if (!this.isInitialRender) {
+                    this.elements.input.focus();
+                }
+                this.isInitialRender = false;
             }
 
             escapeHtml(text) {

@@ -1,6 +1,34 @@
+"use client";
+
+import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
+
 export default function LiveDemoSection() {
+  const [activeTab, setActiveTab] = useState<"basic" | "commerce" | "spa">("basic");
+  const [shouldLoadIframe, setShouldLoadIframe] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShouldLoadIframe(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px" } // Load 200px before section is visible
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section
+      ref={sectionRef}
       id="live-demo"
       className="py-12 lg:py-16 bg-gray-50 scroll-mt-20"
     >
@@ -11,21 +39,94 @@ export default function LiveDemoSection() {
             Probá Nordia ahora
           </h2>
           <p className="text-lg text-neutral-600">
-            Escribí 'setup' para configurar un negocio de ejemplo.
+            Elegí una demo para ver cómo funciona el sistema.
           </p>
         </div>
 
-        {/* Demo Frame */}
-        <div className="max-w-5xl mx-auto">
-          <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-neutral-200">
-            <iframe
-              src="/demo/chatbot_demo.html"
-              className="w-full h-[520px] lg:h-[560px] border-0"
-              loading="lazy"
-              allow="clipboard-write"
-              title="Nordia Bot Demo Interactivo"
-            />
+        {/* Tabs */}
+        <div className="max-w-5xl mx-auto mb-6">
+          <div className="flex gap-2 justify-center flex-wrap">
+            <button
+              onClick={() => setActiveTab("basic")}
+              className={`px-6 py-2 rounded-lg font-medium transition-all ${activeTab === "basic"
+                  ? "bg-nordia text-neutral-900"
+                  : "bg-white text-neutral-600 hover:bg-neutral-100"
+                }`}
+            >
+              Demo Básica
+            </button>
+            <button
+              onClick={() => setActiveTab("commerce")}
+              className={`px-6 py-2 rounded-lg font-medium transition-all ${activeTab === "commerce"
+                  ? "bg-nordia text-neutral-900"
+                  : "bg-white text-neutral-600 hover:bg-neutral-100"
+                }`}
+            >
+              Demo Comercio
+            </button>
+            <button
+              onClick={() => setActiveTab("spa")}
+              className={`px-6 py-2 rounded-lg font-medium transition-all ${activeTab === "spa"
+                  ? "bg-nordia text-neutral-900"
+                  : "bg-white text-neutral-600 hover:bg-neutral-100"
+                }`}
+            >
+              Demo Spa/Estética
+            </button>
           </div>
+        </div>
+
+        {/* Demo Content */}
+        <div className="max-w-5xl mx-auto">
+          {activeTab === "basic" ? (
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-neutral-200">
+              {shouldLoadIframe ? (
+                <iframe
+                  src="/demo/chatbot_demo.html"
+                  className="w-full h-[520px] lg:h-[560px] border-0"
+                  allow="clipboard-write"
+                  title="Nordia Bot Demo Interactivo"
+                />
+              ) : (
+                <div className="w-full h-[520px] lg:h-[560px] flex items-center justify-center bg-neutral-50">
+                  <div className="text-center">
+                    <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-nordia mb-4"></div>
+                    <p className="text-neutral-600 text-sm">Cargando demo interactiva...</p>
+                  </div>
+                </div>
+              )}
+            </div>
+          ) : activeTab === "commerce" ? (
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-neutral-200 p-8 text-center">
+              <h3 className="text-2xl font-bold text-neutral-900 mb-4">
+                Demo de Reactivación de Clientes
+              </h3>
+              <p className="text-neutral-600 mb-6 max-w-2xl mx-auto">
+                Mirá cómo Nordia ejecuta un flujo completo y determinístico para reactivar clientes dormidos en comercio electrónico.
+              </p>
+              <Link
+                href="/demo/commerce"
+                className="inline-block px-8 py-4 bg-nordia text-neutral-900 font-semibold rounded-xl hover:bg-nordia-dim transition-colors"
+              >
+                Ver Demo Completa
+              </Link>
+            </div>
+          ) : (
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-neutral-200 p-8 text-center">
+              <h3 className="text-2xl font-bold text-neutral-900 mb-4">
+                Demo de Reserva de Turnos Spa
+              </h3>
+              <p className="text-neutral-600 mb-6 max-w-2xl mx-auto">
+                Mirá cómo Nordia gestiona reservas de turnos con flujo determinístico, validación de horarios y confirmaciones automáticas.
+              </p>
+              <Link
+                href="/demo/spa"
+                className="inline-block px-8 py-4 bg-nordia text-neutral-900 font-semibold rounded-xl hover:bg-nordia-dim transition-colors"
+              >
+                Ver Demo Completa
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </section>
