@@ -14,7 +14,7 @@ const SITE_CONFIG = {
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://nordia.com.ar",
   locale: "es_AR",
   twitterHandle: "@nordia_ia",
-  defaultImage: "/og-image.jpg",
+  defaultImage: "/og_nordia_1200x630_v1.png",
   themeColor: "#00ff88",
 };
 

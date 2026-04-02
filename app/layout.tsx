@@ -9,7 +9,7 @@ export const metadata: Metadata = generateSEOMeta("home", {
   title: "Confirmá turnos por WhatsApp y evitá huecos en la agenda",
   description:
     "Una demo simple de cómo un consultorio puede responder, reservar y recordar turnos sin caos.",
-  image: "/iso.png",
+  image: "/og_nordia_1200x630_v1.png",
 });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
