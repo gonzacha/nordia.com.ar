@@ -79,22 +79,37 @@ export default function LiveDemoSection() {
         {/* Demo Content */}
         <div className="max-w-5xl mx-auto">
           {activeTab === "basic" ? (
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-neutral-200">
-              {shouldLoadIframe ? (
-                <iframe
-                  src="/demo/chatbot_demo.html"
-                  className="w-full h-[520px] lg:h-[560px] border-0"
-                  allow="clipboard-write"
-                  title="Nordia Bot Demo Interactivo"
-                />
-              ) : (
-                <div className="w-full h-[520px] lg:h-[560px] flex items-center justify-center bg-neutral-50">
-                  <div className="text-center">
-                    <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-nordia mb-4"></div>
-                    <p className="text-neutral-600 text-sm">Cargando demo interactiva...</p>
-                  </div>
+            <div className="lg:grid lg:grid-cols-2 lg:items-center lg:gap-10">
+              <div className="hidden lg:block">
+                <h3 className="text-3xl font-bold text-neutral-900 mb-4">
+                  Así se ve un turno dental por WhatsApp
+                </h3>
+                <ul className="space-y-3 text-neutral-700 text-lg">
+                  <li>• Responde al instante</li>
+                  <li>• Ofrece horarios disponibles</li>
+                  <li>• Confirma y recuerda el turno</li>
+                </ul>
+              </div>
+              <div className="bg-white overflow-hidden shadow-lg sm:rounded-2xl sm:border sm:border-neutral-200 lg:rounded-[32px] lg:border-neutral-300 lg:shadow-2xl lg:p-4">
+                <div className="relative bg-neutral-900 lg:rounded-[28px] lg:p-3">
+                  <div className="hidden lg:block absolute left-1/2 top-3 h-4 w-24 -translate-x-1/2 rounded-full bg-neutral-800"></div>
+                  {shouldLoadIframe ? (
+                    <iframe
+                      src="/demo/chatbot_demo.html"
+                      className="w-full h-[520px] lg:h-[640px] border-0 lg:rounded-[22px] bg-black"
+                      allow="clipboard-write"
+                      title="Nordia Bot Demo Interactivo"
+                    />
+                  ) : (
+                    <div className="w-full h-[520px] lg:h-[640px] flex items-center justify-center bg-neutral-50 lg:rounded-[22px]">
+                      <div className="text-center">
+                        <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-nordia mb-4"></div>
+                        <p className="text-neutral-600 text-sm">Cargando demo interactiva...</p>
+                      </div>
+                    </div>
+                  )}
                 </div>
-              )}
+              </div>
             </div>
           ) : activeTab === "commerce" ? (
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-neutral-200 p-8 text-center">
