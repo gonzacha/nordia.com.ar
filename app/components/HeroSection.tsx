@@ -7,12 +7,12 @@ export default function HeroSection() {
         <FadeIn direction="up" duration={800}>
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">
-              Un sistema para operar tu negocio desde WhatsApp.
+              Confirmá turnos por WhatsApp y evitá huecos en la agenda
             </h1>
 
             <p className="text-xl text-neutral-600 mb-8">
-              Tu equipo da instrucciones. El sistema ejecuta. El cliente recibe
-              atención. Todo queda registrado.
+              Una demo simple de cómo un consultorio puede responder, reservar y recordar
+              turnos sin caos.
             </p>
 
             {/* CTA temporarily removed */}

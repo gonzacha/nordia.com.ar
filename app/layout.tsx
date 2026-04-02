@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { generateOrganizationSchema, generateProductSchema } from "./utils/seo";
+import { generateOrganizationSchema, generateProductSchema, generateSEOMeta } from "./utils/seo";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Nordia — Sistema conversacional para negocios",
+export const metadata: Metadata = generateSEOMeta("home", {
+  title: "Confirmá turnos por WhatsApp y evitá huecos en la agenda",
   description:
-    "Operá tu negocio a través de WhatsApp. Instrucciones del equipo, ejecución del sistema, atención al cliente. Todo registrado.",
-};
+    "Una demo simple de cómo un consultorio puede responder, reservar y recordar turnos sin caos.",
+  image: "/iso.png",
+});
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
