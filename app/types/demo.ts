@@ -16,9 +16,12 @@ export type Message = {
 // Rule types
 export type Rule = {
     id: string;
+    title?: string;
+    description?: string;
     condition: string;
     action: string;
-    status: "pending" | "active" | "completed";
+    status?: "pending" | "active" | "completed";
+    priority?: number;
 };
 
 // Flow state types
