@@ -83,7 +83,7 @@ export default function NotFound() {
               Preguntas frecuentes
             </Link>
             <a
-              href="https://wa.me/5493794281273?text=Hola!%20Tengo%20una%20consulta"
+              href="https://wa.me/5493794045124?text=Hola!%20Tengo%20una%20consulta"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-neutral-400 hover:text-[#00ff88] transition-colors text-sm"

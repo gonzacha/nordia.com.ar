@@ -5,7 +5,7 @@ type PricingSectionProps = {
 };
 
 export default function PricingSection({
-  whatsappNumber = "5493794281273",
+  whatsappNumber = "5493794045124",
 }: PricingSectionProps) {
   const message = "Hola! Quiero información sobre la etapa de validación de Nordia";
   const waLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;

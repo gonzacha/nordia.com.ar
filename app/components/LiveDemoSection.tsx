@@ -121,7 +121,7 @@ export default function LiveDemoSection() {
                   ¿Querés ver este flujo adaptado a tu consultorio?
                 </p>
                 <a
-                  href="https://wa.me/5493794281273"
+                  href="https://wa.me/5493794045124"
                   className="inline-flex items-center justify-center px-5 py-2.5 border border-neutral-300 text-neutral-900 text-sm font-medium rounded-lg hover:bg-neutral-50 transition-colors"
                 >
                   Ver demo personalizada

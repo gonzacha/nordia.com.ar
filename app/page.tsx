@@ -10,7 +10,7 @@ import FinalCTASection from "./components/FinalCTASection";
 import Footer from "./components/Footer";
 
 export default function LandingPage() {
-  const whatsappNumber = process.env.NEXT_PUBLIC_WA_PHONE ?? "5493794281273";
+  const whatsappNumber = process.env.NEXT_PUBLIC_WA_PHONE ?? "5493794045124";
 
   return (
     <main className="min-h-screen overflow-x-hidden bg-neutral-50">

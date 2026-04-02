@@ -27,7 +27,7 @@ export default function Header({
   logo = "Nordia",
   navLinks = defaultNavLinks,
   ctaText = "Contactar",
-  whatsappNumber = "5493794281273",
+  whatsappNumber = "5493794045124",
 }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

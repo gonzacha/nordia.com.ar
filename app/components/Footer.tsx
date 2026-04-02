@@ -50,7 +50,7 @@ const defaultSocialLinks: SocialLink[] = [
 
 const defaultContactInfo = {
   email: "founders@nordia.com.ar",
-  phone: "+54 9 379 428-1273",
+  phone: "+54 9 3794 04-5124",
   location: "Corrientes, Argentina",
 };
 
@@ -60,7 +60,7 @@ export default function Footer({
   quickLinks = defaultQuickLinks,
   socialLinks = defaultSocialLinks,
   contactInfo = defaultContactInfo,
-  whatsappNumber = "5493794281273",
+  whatsappNumber = "5493794045124",
 }: FooterProps) {
   const currentYear = new Date().getFullYear();
 

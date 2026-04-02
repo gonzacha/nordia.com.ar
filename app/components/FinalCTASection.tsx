@@ -25,9 +25,9 @@ export default function FinalCTASection({
   },
   secondaryButton = {
     text: "Ver cómo funciona",
-    href: "/new",
+    href: "#live-demo",
   },
-  whatsappNumber = "5493794281273",
+  whatsappNumber = "5493794045124",
 }: FinalCTASectionProps) {
   const waLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
     "Hola! Quiero empezar con Nordia WhatsApp IA"
